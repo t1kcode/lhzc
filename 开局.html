@@ -1275,6 +1275,11 @@
 
     // ===== 初始化 =====
     function init() {
+        alert(
+            'initSpaceCoins=' + DB.initSpaceCoins +
+        '\n预设=' + (localStorage.getItem('lunhui_presets_v1') || '空')
+        );
+        localStorage.removeItem('lunhui_presets_v1'); 
         $('val-coins').innerText = currentCoins;
         $('attr-total-base').innerText = DB.attrBasePoints;
         renderAttributes();
